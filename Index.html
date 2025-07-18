@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Example</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>QR Code for Personal Info</h2>
+  <div id="qrcode"></div>
+
+  <script>
+    const info = `Name: Mathias Mekuriaw\nAge: 28\nSex: Male`;
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: info,
+      width: 200,
+      height: 200,
+    });
+  </script>
+</body>
+</html>
